@@ -1,5 +1,5 @@
-@charset"gb2312"
-*{margin: 0px; padding: 0px;}
+@charset"gb2312";
+* {margin: 0px; padding: 0px;}
 html{font-size: 100%;}
 body{font-family: "Microsoft YaHei" ,"SimSun",serif;font-size:100%;}
 h1{color: #363636; font-size: 3em;font-weight:normal;  }
