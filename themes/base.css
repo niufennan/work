@@ -20,6 +20,12 @@ nav li a{display: inline-block;color: #fff;text-shadow:none; text-align: center;
 nav li a:active,nav li a:hover{ background: #5caaae;color: #fff}
 
 
+footer{background: #f3f3f3; margin: 20px;}
+footer ul{padding: 10px 0;text-align: center;}
+footer a{text-decoration: none;}
+
+.clearfloat{clear: both;height: 0;line-height: 0;}
+
 /*********************************Begin Media Queries****************************************/
 /**************************/
 /* for 960px or less */
