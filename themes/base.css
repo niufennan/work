@@ -9,7 +9,7 @@ a {color:#333; text-decoration: none;}
 a:hover,a:active,a:focus{color:#d34e16;text-decoration: none;}
 img{max-width: 100%;height: auto;width: auto; vertical-align: middle;}
 p{line-height: 140%;}
-.wrapping{width:90%;margin: 0px auto;}
+.wrapper{width:90%;margin: 0px auto;}
 header{border-bottom: #858585 1px solid; overflow:  hidden;margin:  10px 0;}
 h1#logo{width: 260px; height: 65px; float: left;overflow: hidden;}
 h1#logo>a>img{ height: 50px; width: 50px;vertical-align:middle}
