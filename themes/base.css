@@ -20,6 +20,8 @@ nav li a{display: inline-block;color: #fff;text-shadow:none; text-align: center;
 nav li a:active,nav li a:hover{ background: #5caaae;color: #fff}
 
 .banner{background: url(../images/banner_top.jpg) center top no-repeat #e7e7e7; overflow: hidden;position: relative;}
+.headerPic{width: 130px; height: 130px;border-radius: 100%; overflow: hidden; border:#fff 4px solid; float: left;margin: 40px;}
+
 
 .websiteDescription{position: absolute;top:20px;left: 0;background: rgba(92,170,174,.8);color: white;
 opacity: 0;-webkit-transition:opacity .75s ease-out; -moz-transition:opacity .75s ease-out;-moz-transition:opacity .75s ease-out;
