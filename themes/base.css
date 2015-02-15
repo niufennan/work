@@ -19,6 +19,14 @@ nav li{display: inline;list-style: none;padding:1px;}
 nav li a{display: inline-block;color: #fff;text-shadow:none; text-align: center; background: #333;padding: 8px 10px; min-width: 100px;}
 nav li a:active,nav li a:hover{ background: #5caaae;color: #fff}
 
+.banner{background: url(../images/banner_top.jpg) center top no-repeat #e7e7e7; overflow: hidden;position: relative;}
+
+.websiteDescription{position: absolute;top:20px;left: 0;background: rgba(92,170,174,.8);color: white;
+opacity: 0;-webkit-transition:opacity .75s ease-out; -moz-transition:opacity .75s ease-out;-moz-transition:opacity .75s ease-out;
+transition:opacity .75s ease-out;padding: 20px;}
+.websiteDescription:hover{opacity: 1;}
+.websiteDescription h2{color:#fff;font-size: 16px;margin-bottom: 10px;}
+
 
 footer{background: #f3f3f3; margin: 20px;}
 footer ul{padding: 10px 0;text-align: center;}
