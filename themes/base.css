@@ -13,7 +13,7 @@ p{line-height: 140%;}
 header{border-bottom: #858585 1px solid; overflow:  hidden;margin:  10px 0;}
 h1#logo{width: 260px; height: 65px; float: left;overflow: hidden;}
 h1#logo>a>img{ height: 50px; width: 50px;vertical-align:middle}
-h1#logo>a>span{ display: inline-block; height: 60px; line-height: 120%; font-size:0.8em}
+h1#logo>a>span{ display: inline; height: 60px; line-height: 120%; font-size:0.8em}
 nav{float: right;margin: 20px 0;}
 nav li{display: inline;list-style: none;padding:1px;}
 nav li a{display: inline;color: #fff;text-shadow:none;background: #333;padding: 8px 10px;}
