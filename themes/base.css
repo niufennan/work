@@ -16,5 +16,35 @@ h1#logo>a>img{ height: 50px; width: 50px;vertical-align:middle}
 h1#logo>a>span{ display: inline; height: 60px; line-height: 120%; font-size:0.8em}
 nav{float: right;margin: 20px 0;}
 nav li{display: inline;list-style: none;padding:1px;}
-nav li a{display: inline-block;color: #fff;text-shadow:none;background: #333;padding: 8px 10px; min-width: 100px;}
+nav li a{display: inline-block;color: #fff;text-shadow:none; text-align: center; background: #333;padding: 8px 10px; min-width: 100px;}
 nav li a:active,nav li a:hover{ background: #5caaae;color: #fff}
+
+
+/*********************************Begin Media Queries****************************************/
+/**************************/
+/* for 960px or less */
+@media screen and (max-width: 960px) {
+.wrapper { width: 93.75%; /* 960px/1024px  */ margin: 0 auto; }
+.websiteDescription { margin-left: 0; }
+}
+/* for 768px or less */
+@media screen and (max-width: 768px) {
+.mainContent { float: none; width: auto; }
+.sidebar { margin: 0; }
+h1#logo { float: none }
+nav { float: none; }
+nav li { display: block; list-style: none; padding: 1px; text-align: center; }
+nav li a { display: block; }
+}
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+h1#logo { float: none }
+nav { float: none; }
+nav li { display: block; list-style: none; padding: 1px; text-align: center; }
+nav li a { display: block; }
+}
+@media (min-width: 981px) {
+.websiteDescription { margin-left: 400px }
+.bloglist figure { float: left; width: 233px; margin-right: 20px; margin-bottom: 10px; }
+.bloglist figure img { padding: 4px; border: #f4f2f2 1px solid; width: 225px; }
+}
