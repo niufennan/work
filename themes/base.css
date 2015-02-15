@@ -19,7 +19,7 @@ nav li{display: inline;list-style: none;padding:1px;}
 nav li a{display: inline-block;color: #fff;text-shadow:none; text-align: center; background: #333;padding: 8px 10px; min-width: 100px;}
 nav li a:active,nav li a:hover{ background: #5caaae;color: #fff}
 
-.banner{background: url(../images/banner_top.jpg) center top no-repeat #e7e7e7; overflow: hidden;position: relative;}
+.banner{background: url(../images/banner_top.jpg) center top no-repeat #e7e7e7; overflow: hidden;position: relative; height: 210px;}
 .headerPic{width: 130px; height: 130px;border-radius: 100%; overflow: hidden; border:#fff 4px solid; float: left;margin: 40px;}
 
 
