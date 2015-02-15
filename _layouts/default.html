@@ -6,6 +6,7 @@
 	<meta name="keyworks" content="个人博客,心情随想">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>{{ page.title }}</title>
+	<link href="theme/base.css" rel="stylesheet"/>
 </head>
 <body>
 	<div class="wrapper">
@@ -13,9 +14,12 @@
 		<h1 id="logo">
 			<a href="{{ site.url }}" ><img src="images/nlogo.png" alt="一个牛圈"/><span>一个牛圈</span></a>
 		</h1>
+		<nav>
+			<ul>
+				<li>Blog</li>
+			</ul>
+		</nav>
 	</header>
-
-
 	{{ content }}
 	</div>
 </body>
