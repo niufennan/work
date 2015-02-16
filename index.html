@@ -13,7 +13,7 @@ title: 一个牛圈
 		<ul>
 		 <p>{{ post.excerpt }}</p>
 		</ul>
-		<div class="dateview">{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">阅读全文</a></div>
+		<div class="dateview">{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}" class="readmore">阅读全文</a></div>
 		{% endfor %}
 	</div>
 </div>
