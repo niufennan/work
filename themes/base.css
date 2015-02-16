@@ -44,6 +44,25 @@ line-height: 26px; height: 26px; color: #838383; padding-left: 20px ;font-size: 
 .dateview span a{color: #099b43;}
 a.readmore{color: #028cc2;float: right;padding-right: 5px;}
 
+.sidebar{margin: 20px 0 0 75%;font-size: 14px;}
+.new h3{font-size: 14px;background: url(../images/r_title_bg.jpg) repeat-x center}
+.new h3 p{background: #fff;width: 70px;}
+.new h3 span{color: #65b020}
+.new h3.ph span{color: #37ccca}
+.new h3.link span{color:#f17b6b;}
+.new ul{margin-bottom: 20px;}
+.new ul li a:hover{text-decoration: underline;}
+
+.rank li{height: 25px; line-height: 25px; clear: both;padding-left: 5px; overflow: hidden;padding-left: 15px; background: url(../images/li.jpg) no-repeat left center;}
+.rank {margin: 10px 0;overflow: hidden;}
+.rank li a{color: #333;}
+
+.website{margin: 10px 0;background: #f3f3f3;border-radius: 50%;text-align: center;}
+.website li{line-height: 26px;text-shadow:#fff 1px 1px 1px;height: 26px;}
+
+
+
+
 footer{background: #f3f3f3; margin: 20px;}
 footer ul{padding: 10px 0;text-align: center;}
 footer a{text-decoration: none;}
