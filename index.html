@@ -8,8 +8,8 @@ title: 一个牛圈
 	<div class="bloglist">
 		{% for post in site.posts %}
 		
-		<h3>{{post.title}}</h3>
-		<figure><img src="{{site.baseurl}}{{post.img}}"></figure>
+		<h3><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{post.title}}</a></h3>
+		<figure><img src="{{ site.baseurl }}{{post.img}}"></figure>
 		<ul>
 		 <p>{{ post.excerpt }}</p>
 		</ul>
