@@ -35,7 +35,7 @@ h2.title_tj p{background: #fff;width: 90px;}
 h2.title_tj span{color: #ff8986}
 
 .bloglist h3{border-bottom: 1px solid #858585;font-size: 1.2em;padding-bottom:5px;margin: 20px 0;}
-.bloglist h3,.dateview{color: both;}
+.bloglist h3,.dateview{clear: both;}
 .bloglist ul p{color: #666;font-size: 14px; line-height: 26px;}
 
 .dateview{margin: 10px 0;color: both;overflow: hidden; background: #f6f6f6 url(../images/time.jpg) 5px  center no-repeat;
