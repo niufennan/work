@@ -38,7 +38,8 @@ h2.title_tj span{color: #ff8986}
 .bloglist h3,.dateview{color: both;}
 .bloglist ul p{color: #666;font-size: 14px; line-height: 26px;}
 
-.dateview{margin: 10px 0;color: both;overflow: hidden; background: #f6f6f6 url(../images/time.jpg);}
+.dateview{margin: 10px 0;color: both;overflow: hidden; background: #f6f6f6 url(../images/time.jpg) 5px  center no-repeat;
+line-height: 26px; height: 26px; color: #838383; padding-left: 20px ;font-size: 12px;}
 .dateview span{margin: 0 5px;}
 .dateview span a{color: #099b43;}
 
