@@ -6,25 +6,15 @@ title: 一个牛圈
 <div class="mainContent">
 	<h2 class="title_tj"><p>全部文章<p></h2>
 	<div class="bloglist">
-		<ul>
 		{% for post in site.posts %}
-		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+		
+		<h3>{{post.title}}</h3>
+		<figure><img src="{{post.img}}"></figure>
+		<ul>
+		 <p>{{ post.excerpt }}</p>
+		</ul>
+		<div class="dateview">{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">阅读全文</a></div>
 		{% endfor %}
-		<li>
 	</div>
 </div>
 
-<!--
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
-	{% for post in site.posts %}
-	<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-
-
-	{% for post in site.categories.test %}
-	<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-</ul>
--->
