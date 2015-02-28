@@ -1,0 +1,44 @@
+---
+layout: default
+title: javascript温故知新
+categories: javascript
+---
+<h2>{{ page.title }}</h2>
+<p><div id="cnblogs_post_body"><p>1 javascript作用域</p>
+<p>初学javascript的时候，变量的作用域就感觉有些麻烦，他不像C#或java那样清晰明了，貌似处处都在作用域内，但有时会处处都是空。</p>
+<p>javascript中，变量的作用域只有两种，全局变量和局部变量，并且只由函数决定，函数内的即为局部变量，函数外的就为全局变量 如图：</p>
+<p><img src="http://images.cnitblog.com/blog/46142/201502/281511062051677.png" alt="" /></p>
+<p>一切要是都这样，那么世界该有多么美好！！！但是 总会有各种各样的陷阱</p>
+<p>陷阱1：函数中声明全局变量</p>
+<ol>
+<li>函数中省略var 关键字<br /><img src="http://images.cnitblog.com/blog/46142/201502/281516193617271.png" alt="" /></li>
+<li>笔误 在for循环中，i前忘记写var<br /><img src="http://images.cnitblog.com/blog/46142/201502/281518424556622.png" alt="" /></li>
+<li>第二点的扩充，for(var i...)的情况下，i的作用域不为for循环内部，而是整个函数<br /><img src="http://images.cnitblog.com/blog/46142/201502/281521357999265.png" alt="" /><br />所以，比较好的写法应为<br /><img src="http://images.cnitblog.com/blog/46142/201502/281522331438880.png" alt="" /></li>
+</ol>
+<p>陷阱2 变量提升</p>
+<p>javascript中，变量定义后，在执行环境中会提升至环境顶部，并赋予初始值undefined</p>
+<p>具体表现为：变量无论在何处定义，均会充斥整个函数，但在赋值语句前的值为undefined。</p>
+<p><img src="http://images.cnitblog.com/blog/46142/201502/281526356588656.png" alt="" /></p>
+<p>注意此时，输出信息并不是变量未发现，而是变量的值为undefined。</p>
+<p>举一个更明显的例子：</p>
+<p><img src="http://images.cnitblog.com/blog/46142/201502/281532537527547.jpg" alt="" /></p>
+<p>可以看到在，在变量赋值之前，无论定义位置，均会有默认初始值undefined</p>
+<p>陷阱3：前两个陷阱合成的一个大陷阱！</p>
+<p><img src="http://images.cnitblog.com/blog/46142/201502/281540199243473.jpg" alt="" /></p>
+<p>和想象的是不是不太一样，原因就是，在执行环境中，首先v被提升至函数头，赋值undefined</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:javascript;gutter:true;">var v="设置值";
+function demo5()
+{
+        var v=undefined;
+	console.log(v);
+}
+demo5();
+</pre>
+</div>
+<p>　　<img src="http://images.cnitblog.com/blog/46142/201502/281544206588292.png" alt="" /></p>
+<p>是不是和想象的还不一样？这个更复杂些，因为执行函数之前，一定能确定函数参数的数据类型和数据值，所以，首先就会给函数参数初始化并赋值，然后声明局部变量（变量提升，陷阱2），但并不初始化，此时值为undefined，并初始化函数。</p>
+<p>这一系列的操作会产生一个新的执行环境。执行环境下一篇文章再说。</p>
+<p>参考资料：犀牛书，《单页web应用》，其他大牛blog 谢谢</p>
+</p>
+<p>{{ page.date | date_to_string }}</p>
