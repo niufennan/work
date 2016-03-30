@@ -11,7 +11,7 @@ title: 一个牛圈
 		<h3><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{post.title}}</a></h3>
 		<figure><img src="{{ site.baseurl }}{{post.img}}"></figure>
 		<ul>
-		 <p>{{ post.excerpt }}</p>
+		 <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
 		</ul>
 		<div class="dateview">{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}" class="readmore">阅读全文</a></div>
 		{% endfor %}
