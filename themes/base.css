@@ -96,6 +96,6 @@ nav li a { display: block; }
 }
 @media (min-width: 981px) {
 .websiteDescription { margin-left: 400px }
-.bloglist figure { float: left; width: 233px; margin-right: 20px; margin-bottom: 10px; }
-.bloglist figure img { padding: 4px; border: #f4f2f2 1px solid; width: 225px; }
+.bloglist figure { float: left; width: 133px; margin: 20px;  }
+.bloglist figure img { padding: 4px; border: #f4f2f2 1px solid; width: 125px; border-radius: 5px; }
 }
