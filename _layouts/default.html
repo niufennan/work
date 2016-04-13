@@ -7,6 +7,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>{{ page.title }}</title>
 	<link href="{{ site.baseurl }}/themes/base.css" rel="stylesheet"/>
+	<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -44,5 +45,13 @@
 			<a href="tencent://message/?uin=626211114&Site=在线信息&Menu=yes">626211114</a>
 	</footer>
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
+		    data = JSON.parse(dataStr),
+		    curTag = $.query.get("cat"),
+		    archieves = data[curTag];
+		})
+	</script>
 </body>
 </html>
