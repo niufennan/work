@@ -5,7 +5,7 @@ title: 牛圈
 
 <div>
 	{% for category in site.categories %}
-		<span>{{ category|last|size }}</span>
+		<span> {{category:first}} {{ category|last|size }}</span>
 	{% endfor  %}
 </div>
 <div class="mainContent">
