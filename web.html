@@ -39,7 +39,7 @@ title: 牛圈
 			
 			
 			
-		    data = JSON.parse($("#postlist").val()),
+		    data = JSON.parse($("#postlist").val().replace(new RegExp("\r\n","gm"),"");),
 		    curTag = $.query.get("tags"),
 		    archieves = data[curTag];
 		    console.log(archieves);
