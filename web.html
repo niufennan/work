@@ -38,10 +38,11 @@ title: 牛圈
 		$(document).ready(function() {
 			
 			
-			
-		    data = $("#postlist").val().parseJSON();
-		    curTag = $.query.get("tags"),
-		    archieves = data[curTag];
+			var str1 = '{ "name": "cxh", "sex": "man" }'; 
+			var sjson=str1.parseJSON();
+		    var data = $("#postlist").val().parseJSON();
+		    var curTag = $.query.get("tags"),
+		    var archieves = data[curTag];
 		    console.log(archieves);
 		    
 		})
