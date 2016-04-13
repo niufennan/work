@@ -39,9 +39,9 @@ title: 牛圈
 			
 			
 			var str1 = '{ "name": "cxh", "sex": "man" }'; 
-			var sjson=str1.parseJSON();
+			var sjson=$.parseJSON(str1);
 			console.log(sjson)
-		    var data = $("#postlist").val().parseJSON();
+		    var data = $.parseJSON($("#postlist").val());
 		    console.log(data);
 		    var curTag = $.query.get("tags");
 		    var archieves = data[curTag];
