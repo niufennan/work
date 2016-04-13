@@ -6,15 +6,7 @@ title: 牛圈
 <div class="mainContent">
 	<h2 class="title_tj"><p>全部文章<p></h2>
 	<div class="bloglist">
-		{% for post in site.posts|where:"categories","javascript" %}
-		
-		<h3><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{post.title}}</a></h3>
-		<figure><img src="{{ site.baseurl }}{{post.img}}"></figure>
-		<ul>
-		 <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
-		</ul>
-		<div class="dateview">{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}" class="readmore">阅读全文</a></div>
-		{% endfor %}
+	
 	</div>
 </div>
 
@@ -41,3 +33,21 @@ title: 牛圈
 		</ul>
 	</div>	
 </div>
+<script type="text/javascript">
+		$(document).ready(function() {
+			var category=$.query.get("category");
+			var dataStr="{% for post in site.categories."+category+" %}<h3><a href='{{ site.baseurl }}{{ post.url }}' target='_blank'>"\
+			"{{post.title}}</a></h3><figure><img src='{{ site.baseurl }}{{post.img}}'></figure><ul><p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p></ul>"\
+			"<div class='dateview'>{{ post.date | date_to_string }} <a href='{{ site.baseurl }}{{ post.url }}' class='readmore'>阅读全文</a></div>    {%endfor%}";
+
+			$(".bloglist").html(dataStr);
+
+			/*
+			var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
+		    data = JSON.parse(dataStr),
+		    curTag = $.query.get("tags"),
+		    archieves = data[curTag];
+		    console.log(archieves);
+		    */
+		})
+</script>

@@ -19,7 +19,7 @@
 		<nav>
 			<ul>
 				<li><a href="{{site.baseurl}}">Blog</a></li>
-				<li><a href="{{site.baseurl}}/web.html">前端技术</a></li>
+				<li><a href="{{site.baseurl}}/web.html?category=javascript">前端技术</a></li>
 				<li><a href="{{site.baseurl}}">Java</a></li>
 				<li><a href="{{site.baseurl}}">C#</a></li>
 				<li><a href="{{site.baseurl}}">慢生活</a></li>
@@ -46,14 +46,6 @@
 			<a href="tencent://message/?uin=626211114&Site=在线信息&Menu=yes">626211114</a>
 	</footer>
 	</div>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
-		    data = JSON.parse(dataStr),
-		    curTag = $.query.get("tags"),
-		    archieves = data[curTag];
-		    console.log(archieves);
-		})
-	</script>
+
 </body>
 </html>
