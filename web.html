@@ -1,0 +1,43 @@
+---
+layout: default
+title: 牛圈
+---
+
+<div class="mainContent">
+	<h2 class="title_tj"><p>全部文章<p></h2>
+	<div class="bloglist">
+		{% for post in site.posts :categories:"javascript" %}
+		
+		<h3><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{post.title}}</a></h3>
+		<figure><img src="{{ site.baseurl }}{{post.img}}"></figure>
+		<ul>
+		 <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+		</ul>
+		<div class="dateview">{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}" class="readmore">阅读全文</a></div>
+		{% endfor %}
+	</div>
+</div>
+
+<div class="sidebar">
+	<div class="news">
+		<h3>
+			<p>参考资料</p>
+		<h3>
+		<ul class="rank">
+			<li><a href="http://jekyllcn.com/" target="_blank">Jekll参考资料</a></li>
+			<li><a href="http://v3.bootcss.com/getting-started/">Bootstrap中文文档</a></li>
+			<li><a href="http://www.bootcss.com/p/bootstrap-datetimepicker/">Bootstrap日期时间</a></li>
+			<li><a href="http://momentjs.cn/">Moment.js中文网</a></li>
+			<li><a href="http://coffee-script.org/">CoffeeScript中文网</a></li>
+			<li><a href="http://less.bootcss.com/">Less.js中文文档</a></li>
+			<li><a href="http://nodeapi.ucdok.com/#/api/">Node.js中文文档</a></li>
+			<li><a href="http://fis.baidu.com/index.html">FIS</a></li>
+		</ul>
+
+		<h3 class="links"><p>友情链接</p></h3>
+		<ul class="website">
+			<li><a href="https://github.com/"> GO! github</a></li>
+			<li><a href="http://www.yangqq.com/">YangQQ's Blog</a></li>
+		</ul>
+	</div>	
+</div>
