@@ -37,7 +37,7 @@ title: 牛圈
 		$(document).ready(function() {
 			
 			
-			var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}","img":"{{ site.baseurl }}{{post.img}}","content":"{{ post.excerpt | remove: "<p>" | remove: "</p>" ,remove:"\n"}}" "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
+			var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}","img":"{{ site.baseurl }}{{post.img}}","content":"{{ post.excerpt | remove: "<p>" | remove: "</p>"| remove:"\n"}}" "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
 		    data = JSON.parse(dataStr),
 		    curTag = $.query.get("tags"),
 		    archieves = data[curTag];
