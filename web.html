@@ -33,7 +33,7 @@ title: 牛圈
 		</ul>
 	</div>	
 </div>
-<input type="hidden" value='{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}","img":"{{ site.baseurl }}{{post.img}}","content":"{{ post.excerpt | remove: "<p>" | remove: "</p>"| remove:"\r\n"}}" ,"date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }' id='postlist'>
+<input type="hidden" value='{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}","img":"{{ site.baseurl }}{{post.img}}","content":\'{{ post.excerpt | remove: "<p>" | remove: "</p>"| remove:"\r\n"}}\' ,"date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }' id='postlist'>
 <script type="text/javascript">
 		$(document).ready(function() {
 			
