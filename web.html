@@ -2,7 +2,7 @@
 layout: default
 title: 牛圈
 ---
-<div>eeeeeeeeeeeeeeee</div>
+<div>aaaaaaaaaaaaaaaa</div>
 <div class="mainContent">
 	<h2 class="title_tj"><p>全部文章<p></h2>
 	<div class="bloglist">
@@ -37,7 +37,7 @@ title: 牛圈
 		$(document).ready(function() {
 			
 			
-			var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}","img":"{{ site.baseurl }}{{post.img}}","content":"{{ post.excerpt | remove: "<p>" | remove: "</p>"| remove:"\r\n"}}" "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
+			var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}","img":"{{ site.baseurl }}{{post.img}}","content":"{{ post.excerpt | remove: "<p>" | remove: "</p>"| remove:"\r\n"}}" ,"date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
 		    data = JSON.parse(dataStr),
 		    curTag = $.query.get("tags"),
 		    archieves = data[curTag];
